@@ -15,7 +15,6 @@ public class missingElement {
                }
                for (int i = 2; i <= arrLen + 1; i++){
                    next = next ^ i;
-                   System.out.println(next);
                }
            }
 
@@ -27,7 +26,7 @@ public class missingElement {
     public static void main(String[]args){
         missingElement miss = new missingElement();
 
-       System.out.println(miss.missingNumber(new int[] {1,2,3,5}));
+       System.out.println(miss.missingNumber(new int[] {1,2,3,0}));
        //System.out.println(miss.missingNumber(new int[] {1,2}));
        //System.out.println(miss.missingNumber(new int[] {3,2}));
        //System.out.println(miss.missingNumber(new int[] {2}));

@@ -14,7 +14,6 @@ public class CyclicRotation {
                 }
                 A[0] = lastElement;
             }
-
         }
         return A;
     }
