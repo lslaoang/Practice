@@ -15,11 +15,23 @@ public class OrClass {
         return  flag;
     }
 
+    public boolean classicOr(int a){
+        boolean flag = false;
+        if(a==number1 || a == number2){
+            flag = true;
+        }
+        return flag;
+    }
+
     public static void main(String args[]){
         OrClass orClass = new OrClass();
 
         System.out.println(orClass.checkOr(1));
         System.out.println(orClass.checkOr(2));
         System.out.println(orClass.checkOr(3));
+
+        System.out.println(orClass.classicOr(1));
+        System.out.println(orClass.classicOr(2));
+        System.out.println(orClass.classicOr(3));
     }
 }
