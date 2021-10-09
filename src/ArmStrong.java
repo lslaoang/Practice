@@ -27,6 +27,5 @@ public class ArmStrong {
         System.out.println(armStrong.isArmString(1));
         System.out.println(armStrong.isArmString(0));
         System.out.println(armStrong.isArmString(3));
- 7
     }
 }
