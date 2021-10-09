@@ -11,7 +11,7 @@ public class ArmStrong {
             sum += (remainder * remainder * remainder);
             initialValue = initialValue / 10;
         }
-        if(sum == num && num > 9){
+        if(sum == num){
             flag = true;
         }
         return flag;
@@ -25,5 +25,8 @@ public class ArmStrong {
         System.out.println(armStrong.isArmString(407));
         System.out.println(armStrong.isArmString(200));
         System.out.println(armStrong.isArmString(1));
+        System.out.println(armStrong.isArmString(0));
+        System.out.println(armStrong.isArmString(3));
+ 7
     }
 }
