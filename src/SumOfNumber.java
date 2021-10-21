@@ -19,14 +19,18 @@ public class SumOfNumber {
             delta = num - setOfNumber.get(i);
             if (setOfNumber.containsValue(delta)) {
                 if(results.containsValue(delta) == results.containsKey(delta)){
-                    results.put(delta,setOfNumber.get(i));
+                    if(delta != i){
+                        results.put(delta,setOfNumber.get(i));
+                    }
+
                 }
             }
         }
+
     List<String> finalResult = new ArrayList<>();
 
         for(Map.Entry m : results.entrySet()){
-            finalResult.add(m.getKey() +" + "+ m.getValue());
+            finalResult.add(m.getKey() +" + "+ m.getValue() +" = "+num);
         }
 
         return  finalResult;
@@ -34,6 +38,6 @@ public class SumOfNumber {
 
 
     public static void main(String args[]){
-        System.out.println(SumOfNumber.addendsOf(15));
+        System.out.println(SumOfNumber.addendsOf(12));
     }
 }
