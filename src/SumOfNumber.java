@@ -38,6 +38,6 @@ public class SumOfNumber {
 
 
     public static void main(String args[]){
-        System.out.println(SumOfNumber.addendsOf(12));
+        System.out.println(SumOfNumber.addendsOf(2));
     }
 }
