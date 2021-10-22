@@ -44,7 +44,7 @@ public class CyclicRotation {
     public static void main(String...args){
         CyclicRotation cr = new CyclicRotation();
 
-        System.out.println(Arrays.toString(cr.solution(new int[]{1, 2, 3, 4,5,6,7,8,9},3)));
+        System.out.println(Arrays.toString(cr.solution(new int[]{1, 2, 3, 4,5,6,7,8,9},7)));
         //System.out.println(Arrays.toString(cr.solution(new int[]{},5)));
         //System.out.println(Arrays.toString(cr.solution(new int[]{1,2},5)));
 
