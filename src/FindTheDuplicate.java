@@ -36,7 +36,6 @@ public class FindTheDuplicate {
                 }
             }
         }
-
         return duplicates;
     }
     public static void main(String[] args) {
