@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class FindTheDuplicate {
     private static int findDuplicate(int[] nums) {
         int n = nums.length;
@@ -21,12 +23,27 @@ public class FindTheDuplicate {
         // Both slow and fast points to the duplicate element
         return fast;
     }
+
+    public static int findDuplicateByBrute(int ... num){
+        Arrays.sort(num);
+        for(int i = 0; i < num.length; i++){
+            for(int x = 0; x < i; x++){
+                if(num[x] == num[i]){
+                    return num[x];
+                }
+            }
+        }
+
+        return 1;
+    }
     public static void main(String[] args) {
         // Example 1
         int nums[] = new int[]{1, 3, 4, 4,4, 2};
-        System.out.println(findDuplicate(nums));
+      //  System.out.println(findDuplicate(nums));
         // Example 2
-        nums = new int[]{3, 1, 5, 4, 2, 5};
-        System.out.println(findDuplicate(nums));
+       // nums = new int[]{3, 1, 5, 4, 2, 5};
+       // System.out.println(findDuplicate(nums));
+
+        System.out.println(findDuplicateByBrute(nums));
     }
 }
