@@ -1,9 +1,7 @@
 public class ChangeDomain {
 
     public static String changeDomain(String email){
-        int i = email.indexOf("@");
-
-        return email.substring(0,i) + "@ubs.com";
+        return email.substring(0,email.indexOf("@")) + "@ubs.com";
     }
 
     public static void main (String[] args){
