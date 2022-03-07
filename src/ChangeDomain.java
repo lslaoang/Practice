@@ -10,5 +10,7 @@ public class ChangeDomain {
         System.out.println(changeDomainToDefault("laurrel.laoang@fsf.com"));
         System.out.println(changeDomainToDefault("lauressl.laoang@ss.com"));
 
+        System.out.println(Long.toHexString(System.currentTimeMillis()));
+
     }
 }
