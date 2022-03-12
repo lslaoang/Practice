@@ -9,8 +9,6 @@ public class ChangeDomain {
 
     public static String changeDomainToDefault(String email) {
 
-
-//        return email.substring(0,email.indexOf("@")) + "@ubs.com";
         String emailDomain = email.substring(email.indexOf("@") + 1);
         String idArea = email.substring(0, email.indexOf("@"));
         if (emailDomain.equals(UBSDEV) || emailDomain.equals(UBSTEST)) {
@@ -18,7 +16,6 @@ public class ChangeDomain {
             return idArea + UBSPROD;
         }
         return email;
-        // return email.substring(email.indexOf("@")) + "@ubs.com";
     }
 
     public static String changeDomainToDefaultRegex(String email) {
