@@ -23,7 +23,7 @@ public class ArmStrong {
             counter++;
             number = number / 10;
         }
-        /* Returned number should be greater than 1. The minimum operation should be squared of num */
+        /* Returned number should be greater than 1. The minimum operation should be square of num */
         return counter == 1 ? 2 : counter;
     }
 
