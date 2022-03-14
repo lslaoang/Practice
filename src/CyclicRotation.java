@@ -1,5 +1,10 @@
 import java.util.Arrays;
 
+/**
+ * @method = solution
+ * @parameters = array (more than one integer), rotation (any integer that indicates the rotation times)
+ * Member of an array will be moved in a based on the integer input(rotation)
+ */
 public class CyclicRotation {
 
     private int[] solution(int[] A, int K){
