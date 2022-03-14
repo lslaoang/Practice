@@ -4,7 +4,7 @@
  */
 public class ArmStrong {
 
-    public boolean isArmString(int num){
+    public boolean isArmStrong(int num){
         int initialValue = num;
         int sum = 0, remainder;
         int digits = numberOfDigits(num);
@@ -29,14 +29,14 @@ public class ArmStrong {
 
     public static void main(String[] args){
         ArmStrong armStrong = new ArmStrong();
-        System.out.println("Is 153 armstrong? " + armStrong.isArmString(153));
-        System.out.println("Is 370 armstrong? " +armStrong.isArmString(370));
-        System.out.println("Is 371 armstrong? " +armStrong.isArmString(371));
-        System.out.println("Is 407 armstrong? " +armStrong.isArmString(407));
-        System.out.println("Is 200 armstrong? " +armStrong.isArmString(200));
-        System.out.println("Is 1 armstrong? " +armStrong.isArmString(1));
-        System.out.println("Is 0 armstrong? " +armStrong.isArmString(0));
-        System.out.println("Is 3 armstrong? " +armStrong.isArmString(3));
-        System.out.println("Is 1634 armstrong? " +armStrong.isArmString(1634));
+        System.out.println("Is 153 armstrong? " + armStrong.isArmStrong(153));
+        System.out.println("Is 370 armstrong? " +armStrong.isArmStrong(370));
+        System.out.println("Is 371 armstrong? " +armStrong.isArmStrong(371));
+        System.out.println("Is 407 armstrong? " +armStrong.isArmStrong(407));
+        System.out.println("Is 200 armstrong? " +armStrong.isArmStrong(200));
+        System.out.println("Is 1 armstrong? " +armStrong.isArmStrong(1));
+        System.out.println("Is 0 armstrong? " +armStrong.isArmStrong(0));
+        System.out.println("Is 3 armstrong? " +armStrong.isArmStrong(3));
+        System.out.println("Is 1634 armstrong? " +armStrong.isArmStrong(1634));
     }
 }
