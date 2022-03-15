@@ -16,11 +16,7 @@ public class OrClass {
     }
 
     public boolean classicOr(int a){
-        boolean flag = false;
-        if(a==number1 || a == number2){
-            flag = true;
-        }
-        return flag;
+        return a == number1 || a == number2;
     }
 
     public static void main(String args[]){
