@@ -17,6 +17,12 @@ public class ArmStrong {
         }
         return sum == num;
     }
+
+    /**
+     * Check the number of digits of an input number
+     * @param number
+     * @return number of digits
+     */
     private int numberOfDigits(int number) {
         int counter = 0;
         while(number != 0){
