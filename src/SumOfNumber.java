@@ -14,14 +14,13 @@ public class SumOfNumber {
             setOfNumber.put(x,x);
         }
 
-        int delta = 0;
         for(int i = 1; i<=10 ;i++) {
-            delta = num - setOfNumber.get(i);
+            int delta = num - setOfNumber.get(i);
             if (setOfNumber.containsValue(delta)) {
                 if(results.containsValue(delta) == results.containsKey(delta)){
-                    if(delta != i){
+                   // if(delta != i){
                         results.put(delta,setOfNumber.get(i));
-                    }
+                  //  }
 
                 }
             }
@@ -29,15 +28,14 @@ public class SumOfNumber {
 
     List<String> finalResult = new ArrayList<>();
 
-        for(Map.Entry m : results.entrySet()){
-            finalResult.add(m.getKey() +" + "+ m.getValue() +" = "+num);
+        for(Map.Entry<Integer, Integer> m : results.entrySet()){
+            finalResult.add(String.format("%s + %s = %s \n" ,m.getKey() ,m.getValue(),num));
         }
 
         return  finalResult;
     }
 
-
-    public static void main(String args[]){
-        System.out.println(SumOfNumber.addendsOf(2));
+    public static void main(String[] args){
+        System.out.println(SumOfNumber.addendsOf(6));
     }
 }
