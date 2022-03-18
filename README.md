@@ -1,4 +1,4 @@
-# Practice
+# Practice Coding
 Codility Practice.
 
 
