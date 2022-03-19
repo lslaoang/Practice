@@ -1,10 +1,5 @@
 # Practice Coding
-Codility Practice.
-
-
-Different Machine Problem and the users approach.
-Practice and mind-setting in creating logics and problem solving.
-
-Logic enhancer and brain teaser.
-
-Comparison of previous logic and latest logic.
+- Codility Practice.
+- Creating logics and problem solving.
+- Logic enhancer and brain teaser.
+- Comparison of previous logic and latest logic.
