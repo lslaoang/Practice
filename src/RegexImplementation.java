@@ -1,4 +1,4 @@
-public class ChangeDomain {
+public class RegexImplementation {
     static final String UBSDEV = "ubsdev.com";
     static final String UBSTEST = "ubstest.com";
     static final String UBSPROD = "@ubs.com";
@@ -24,6 +24,12 @@ public class ChangeDomain {
         return email;
     }
 
+    public static String removePunctuationMarks(String word){
+//        word = word.replaceAll("\\p{Punct}|\\s","").replace("letterId","");
+        word = word.substring(word.indexOf(":")+1,word.indexOf("}"));
+        return word;
+    }
+
     public static void main(String[] args) {
         System.out.println(changeDomainToDefault("laurel.laoang@ubstest.com"));
         System.out.println(changeDomainToDefault("laurrel.laoang@ubsdev.com"));
@@ -33,6 +39,7 @@ public class ChangeDomain {
 
         System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubstest.com"));
         System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubsdev.com"));
+        System.out.println( removePunctuationMarks("{\"letterId\":\"somethingHere-sS\"}"));
 
     }
 }
