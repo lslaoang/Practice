@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 /**
  * @method = solution
- * @parameters = array (more than one integer), rotation (any integer that indicates the rotation times)
+ * @param = array (more than one integer), rotation (any integer that indicates the rotation times)
  * Member of an array will be moved in a based on the integer input(rotation)
  */
 public class CyclicRotation {
@@ -14,9 +14,7 @@ public class CyclicRotation {
         if(arrSize != 0){
             for(int i=0;i<K;i++){
                 lastElement = A[arrSize-1];
-                for(int x=arrSize-1;x>0;x--){
-                    A[x] = A[x-1];
-                }
+                System.arraycopy(A, 0, A, 1, arrSize - 1);
                 A[0] = lastElement;
             }
         }
@@ -30,10 +28,7 @@ public class CyclicRotation {
         }
 
         int[] tmpArr = new int[rotation];
-        for(int i = 0; i <= tmpArr.length-1; i++){
-            tmpArr[i] = arrNum[(arrNum.length-rotation) + i];
-        }
-
+        System.arraycopy(arrNum, (arrNum.length - rotation), tmpArr, 0, tmpArr.length - 1 + 1);
 
         for(int x = arrNum.length-1; x>=0 ;x--){
             if(x < rotation){
@@ -49,10 +44,13 @@ public class CyclicRotation {
     public static void main(String...args){
         CyclicRotation cr = new CyclicRotation();
 
-        System.out.println(Arrays.toString(cr.solution(new int[]{1, 2, 3, 4,5,6,7,8,9},7)));
+        System.out.println(Arrays.toString(cr.solution(new int[]{1, 2, 3, 4,5,6,7,8,9},8)));
         //System.out.println(Arrays.toString(cr.solution(new int[]{},5)));
         //System.out.println(Arrays.toString(cr.solution(new int[]{1,2},5)));
 
-        System.out.println(cr.solutionB(new int[]{1, 2, 3, 4,5,6,7,8,9},7));
+        System.out.println(cr.solutionB(new int[]{1, 2, 3, 4,5,6,7,8,9},8));
+        System.out.println(cr.solutionB(new int[]{1, 2, 3, 4,5,6,7,8,9},3));
+        System.out.println(cr.solutionB(new int[]{1, 2, 3, 4,5,6,7,8,9},5));
+        System.out.println(cr.solutionB(new int[]{1, 2, 3, 4,5,6,7,8,9},0));
     }
 }
