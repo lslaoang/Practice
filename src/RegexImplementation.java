@@ -24,22 +24,22 @@ public class RegexImplementation {
         return email;
     }
 
-    public static String removePunctuationMarks(String word){
-//        word = word.replaceAll("\\p{Punct}|\\s","").replace("letterId","");
-        word = word.substring(word.indexOf(":")+1,word.indexOf("}"));
-        return word;
+    public static String removePunctuationSpace(String word) {
+        return word.replaceAll("\\p{Punct}|\\s", "");
+    }
+
+    public static String getPropertyValue(String property) {
+        return property.substring(property.indexOf(":") + 1, property.indexOf("}"));
     }
 
     public static void main(String[] args) {
         System.out.println(changeDomainToDefault("laurel.laoang@ubstest.com"));
         System.out.println(changeDomainToDefault("laurrel.laoang@ubsdev.com"));
-
-
         System.out.println(changeDomainToDefault("laurel.laoang@ubstests.com"));
 
         System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubstest.com"));
         System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubsdev.com"));
-        System.out.println( removePunctuationMarks("{\"letterId\":\"somethingHere-sS\"}"));
-
+        System.out.println(removePunctuationSpace("{\"letterId\":\"somethingHere\"}"));
+        System.out.println(getPropertyValue("{\"letterId\":\"somethingHere-sS\"}"));
     }
 }
