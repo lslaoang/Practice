@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
+/**
+ * Using vector to avoid size declaration and Runtime exceptions
+ */
 public class StackVector {
     private static Vector<Integer> stack = new Vector<>();
 
