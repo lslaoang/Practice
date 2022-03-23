@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class StackVector {
@@ -8,11 +10,21 @@ public class StackVector {
         stackVector.push(1);
         stackVector.push(2);
         stackVector.push(3);
+        stackVector.push(101011);
+        stackVector.push(3);
 
+        stackVector.peak();
+        stackVector.pop();
         stackVector.pop();
         stackVector.pop();
 
         stackVector.popAll();
+        stackVector.peak();
+    }
+
+    public void peak(){
+        List<Integer> list = new ArrayList<>(stack);
+       System.out.println("Elements of the stack: " + list);
     }
 
     public void push(int num) {
@@ -22,12 +34,12 @@ public class StackVector {
 
     public void pop() {
         int lastElement = stack.lastElement();
-        stack.removeElementAt(lastElement - 1);
+        stack.removeElementAt(stack.lastIndexOf(lastElement));
         System.out.printf("Number %d removed from the stack.\n", lastElement);
     }
 
     public void popAll() {
         stack.removeAllElements();
-        System.out.println("Removed all elements in the stack.\n");
+        System.out.println("Removed all elements in the stack.");
     }
 }
