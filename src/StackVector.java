@@ -3,10 +3,10 @@ import java.util.List;
 import java.util.Vector;
 
 /**
- * Using vector to avoid size declaration and Runtime exceptions
+ * Using VECTOR to create stack to avoid size declaration and Runtime exceptions
  */
 public class StackVector {
-    private static Vector<Integer> stack = new Vector<>();
+    private static final Vector<Integer> stack = new Vector<>();
 
     public static void main(String[] args) {
         StackVector stackVector = new StackVector();
