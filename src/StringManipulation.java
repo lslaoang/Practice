@@ -23,5 +23,6 @@ public class StringManipulation {
             System.out.println(thisWord.replace("c",""));
 
             System.out.println(removeWord("What sentence is this?", "is "));
+        System.out.println(removeWord("What is this sentence?", "is "));
     }
 }
