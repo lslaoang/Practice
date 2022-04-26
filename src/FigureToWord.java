@@ -39,11 +39,12 @@ public class FigureToWord {
     }
 
     private static int getTenths(char[] numberInChar, int digits, StringBuilder stringBuilder, int x) {
-        if (numberInChar[numberInChar.length - 2] == '1') {
+        int lastDigit = numberInChar.length - 1;
+        if (numberInChar[lastDigit - 1] == '1') {
             x = digits;
-            stringBuilder.append(tenthsInWord(numberInChar[numberInChar.length - 1]));
+            stringBuilder.append(tenthsInWord(numberInChar[lastDigit]));
         } else {
-            if (x == 1) {
+            if (x == lastDigit) {
                 stringBuilder.append(onesInWord(numberInChar[x]));
             } else {
                 stringBuilder.append(tensInWord(numberInChar[x]));
