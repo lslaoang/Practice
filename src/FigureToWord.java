@@ -112,18 +112,18 @@ public class FigureToWord {
 
     public static void main(String[] args) {
 
-        System.out.println(convertToWord(1031));
-        System.out.println(convertToWord(1234));
-        System.out.println(convertToWord(2011));
-        System.out.println(convertToWord(30));
-        System.out.println(convertToWord(31));
-        System.out.println(convertToWord(4));
-        System.out.println(convertToWord(111));
-        System.out.println(convertToWord(1001));
-        System.out.println(convertToWord(101));
-        System.out.println(convertToWord(1011));
+//        System.out.println(convertToWord(1031));
+//        System.out.println(convertToWord(1234));
+//        System.out.println(convertToWord(2011));
+//        System.out.println(convertToWord(30));
+//        System.out.println(convertToWord(31));
+//        System.out.println(convertToWord(4));
+//        System.out.println(convertToWord(111));
+//        System.out.println(convertToWord(1001));
+//        System.out.println(convertToWord(101));
+//        System.out.println(convertToWord(1011));
         System.out.println(convertToWord(20));
         System.out.println(convertToWord(2));
-        System.out.println(convertToWord(23));
+        System.out.println(convertToWord(2000));
     }
 }
