@@ -103,11 +103,19 @@ public class FigureToWord {
     }
 
     private static String higherDigitsInWord(int digit) {
-        return switch (digit) {
-            case 3 -> "Hundred ";
-            case 4 -> "Thousand ";
-            default -> "";
-        };
+//        return switch (digit) {
+//            case 3 -> "Hundred ";
+//            case 4 -> "Thousand ";
+//            default -> "";
+//        };
+
+        if (digit == 3) {
+            return "Hundred";
+        } else if (digit == 4) {
+            return "Thousand";
+        } else
+
+            return "";
     }
 
     public static void main(String[] args) {
@@ -124,6 +132,6 @@ public class FigureToWord {
 //        System.out.println(convertToWord(1011));
         System.out.println(convertToWord(20));
         System.out.println(convertToWord(2));
-        System.out.println(convertToWord(2000));
+        System.out.println(convertToWord(23000));
     }
 }
