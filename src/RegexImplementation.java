@@ -32,14 +32,27 @@ public class RegexImplementation {
         return property.substring(property.indexOf(":") + 1, property.indexOf("}"));
     }
 
-    public static void main(String[] args) {
-        System.out.println(changeDomainToDefault("laurel.laoang@ubstest.com"));
-        System.out.println(changeDomainToDefault("laurrel.laoang@ubsdev.com"));
-        System.out.println(changeDomainToDefault("laurel.laoang@ubstests.com"));
+    private static void validateVersionFormat(String version) {
+        final String VALID_VERSION_REGEX = "^[1-9]\\d*(\\.[0-9]\\d*){0,2}$";
+        if (!version.matches(VALID_VERSION_REGEX)) {
+//            throw new RuntimeException("Version format is not valid.");
+            System.out.println("Not valid");
+        } else {
+            System.out.println("Valid format");
+        }
 
-        System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubstest.com"));
-        System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubsdev.com"));
-        System.out.println(removePunctuationSpace("{\"letterId\":\"somethingHere\"}"));
-        System.out.println(getPropertyValue("{\"letterId\":\"somethingHere-sS\"}"));
+    }
+
+    public static void main(String[] args) {
+//        System.out.println(changeDomainToDefault("laurel.laoang@ubstest.com"));
+//        System.out.println(changeDomainToDefault("laurrel.laoang@ubsdev.com"));
+//        System.out.println(changeDomainToDefault("laurel.laoang@ubstests.com"));
+//
+//        System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubstest.com"));
+//        System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubsdev.com"));
+//        System.out.println(removePunctuationSpace("{\"letterId\":\"somethingHere\"}"));
+//        System.out.println(getPropertyValue("{\"letterId\":\"somethingHere-sS\"}"));
+
+        validateVersionFormat("99.99.0999");
     }
 }
