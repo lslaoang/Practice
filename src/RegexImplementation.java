@@ -44,14 +44,14 @@ public class RegexImplementation {
     }
 
     public static void main(String[] args) {
-//        System.out.println(changeDomainToDefault("laurel.laoang@ubstest.com"));
-//        System.out.println(changeDomainToDefault("laurrel.laoang@ubsdev.com"));
-//        System.out.println(changeDomainToDefault("laurel.laoang@ubstests.com"));
-//
-//        System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubstest.com"));
-//        System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubsdev.com"));
-//        System.out.println(removePunctuationSpace("{\"letterId\":\"somethingHere\"}"));
-//        System.out.println(getPropertyValue("{\"letterId\":\"somethingHere-sS\"}"));
+        System.out.println(changeDomainToDefault("laurel.laoang@ubstest.com"));
+        System.out.println(changeDomainToDefault("laurrel.laoang@ubsdev.com"));
+        System.out.println(changeDomainToDefault("laurel.laoang@ubstests.com"));
+
+        System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubstest.com"));
+        System.out.println(changeDomainToDefaultRegex("laurel.laoang@ubsdev.com"));
+        System.out.println(removePunctuationSpace("{\"letterId\":\"somethingHere\"}"));
+        System.out.println(getPropertyValue("{\"letterId\":\"somethingHere-sS\"}"));
 
         validateVersionFormat("99.99.0999");
     }
